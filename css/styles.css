@@ -1,0 +1,457 @@
+/* reset */
+* {
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    position: relative;
+  }
+  
+  /* body styles */
+  body {
+    font-family: Roboto Condensed, sans-serif;
+    line-height: 1.5;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    padding: 40px;
+    margin: auto;
+    background-image: url("https://wallpapers.com/images/hd/retro-gaming-3840-x-2160-wallpaper-38ifv6m2bbgo4yaa.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+  
+  section {
+    padding: 50px 0;
+    margin-bottom: 100px;
+  }
+  
+  /* welcome section */
+  #welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #welcome-section h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    opacity: 0;
+    animation: opacityFadeIn 2s ease-in-out forwards;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  #welcome-section h1:hover {
+    transform: scale(1.1);
+  }
+  /* keyframes for h1 */
+  @keyframes opacityFadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  #welcome-section h3 {
+    font-size: 1.5rem;
+    margin-top: 25px;
+    font-weight: 500;
+    color: #ffcc00;
+    text-align: left;
+    opacity: 0;
+    animation: opacityFadeIn 2s ease-in-out forwards;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #welcome-section h3:hover {
+    transform: scale(1.1);
+  }
+  
+  /* layout */
+  .about-container, .project-container, .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px 0;
+    margin-bottom: 30px;
+  }
+  
+  /* about me section */
+  #about-me {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    gap: 30px;
+  
+  }
+  
+  #about-me h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  
+  /* content layout for about */
+  .about-content {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about-image {
+    border-radius: 50%;
+    border: 6px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .about-image:hover {
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 15px rgba(194, 194, 194, 0.5);
+  }
+  
+  .about-text {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-top: 20px;
+  }
+  
+  .about-text p {
+    margin-bottom: 25px;
+  }
+  
+  .about-content, .about-text {
+    flex: 1 1 50%;
+  }
+  
+  /* image */
+  img {
+    max-width: 300%;
+    height: auto;
+  }
+  
+  /* media queries */
+  @media (max-width: 600px) {
+    #navbar ul {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    #navbar li {
+      text-align: center;
+      padding: 10px;
+    }
+  }
+  
+  /* about me media queries */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-image {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* nav bar */
+  #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    color: #ffff;
+    padding: 10px 0;
+  }
+  
+  #navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  #navbar li {
+    display: inline;
+    padding: 10px 10px;
+  }
+  
+  #navbar a {
+    text-decoration: none !important;
+  }
+  
+  #navbar a:hover {
+    text-decoration: none;
+  }
+  
+  /* h1, h2, h3... */
+  h1, h3 {
+    color: #9631fc;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  h1 {
+    width: 100%;
+    text-decoration: underline;
+  }
+  
+  
+  
+  /* links */
+  a {
+    color: #ffcc00;
+  }
+  
+  a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffff;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  
+  
+  /* p's */
+  p {
+    line-height: 1.6;
+    letter-spacing: 1px;
+  }
+  
+  /* project tiles */
+  .project-tile {
+    box-shadow: 0px 4px 10px   #a7a7a715;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 50px;
+    border-radius: 50px;
+    text-align: center;
+  }
+  
+  .project-tile img {
+    width: 600px;
+    height: auto;
+    object-fit: cover;
+    max-width: 500px;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    display: block;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .project-tile img:hover {
+    transform: scale(1.05);
+  }
+  
+  .project-tile h3 {
+    font-size: 2rem;
+  }
+  
+  .project-tile h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #00d1ff;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+  }
+  
+  .project-tile ul {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+  
+  .project-tile a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 10px;
+    color: #00ff8c;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    height: 50px;
+    width: 70px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    line-height: 30px;
+  }
+  
+  .project-tile a:hover {
+    color:  #ffcc00;
+  }
+  
+  #projects .show-more .button {
+    height: 70px; 
+    width: 70px;
+    line-height: 22px;
+  }
+  
+  /* ul styles */
+  ul {
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+    list-style: none;
+    position: relative;
+    padding-bottom: 11px;
+  }
+  
+  ul li:last-child {
+    border-style: none;
+  }
+  
+  ul li:before {
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.5em;
+    font-weight: bold;
+  }
+  
+  /* contact section styles */
+  #contact-section {
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(60, 60, 60, 0.379);
+  }
+  
+  #contact-section h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  #contact-section p {
+    font-size: 1.1rem;
+    margin-bottom:40px;
+    color: #d3d3d3;
+  }
+  
+  /* contact section container styles */
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .contact-item a {
+    text-decoration: none;
+    color: #00ff8c;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-item a:hover {
+    color: #00d1ff;
+  }
+  
+  /* contact icons */
+  .contact-item img {
+    width: 70px;
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+    background-color: rgb(206, 206, 206);
+    border-radius: 30%;
+  }
+  
+  .contact-item img:hover {
+    transform: scale(1.09);
+  }
+  
+  /* footer */
+  #footer {
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    text-align: center;
+  }
+  
+  .footer-container p {
+    color: #f0f0f0;
+    font-size: 0.9rem;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
